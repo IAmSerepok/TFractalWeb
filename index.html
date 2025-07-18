@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Square Fractal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="control-panel">
+            <h1>Parameters</h1>
+            
+            <div class="control-group">
+                <label for="iter">Iterations: <span id="iter-value">4</span></label>
+                <input type="range" id="iter" min="0" max="6" value="4" step="1" class="slider">
+            </div>
+            
+            <div class="control-group">
+                <label for="seed-size">Seed Size: <span id="seed-size-value">3</span></label>
+                <input type="range" id="seed-size" min="2" max="5" value="3" step="1" class="slider">
+            </div>
+            
+            <div class="control-group">
+                <label for="color1">Color for 0</label>
+                <input type="color" id="color1" value="#000931" class="color-picker">
+            </div>
+            
+            <div class="control-group">
+                <label for="color2">Color for max</label>
+                <input type="color" id="color2" value="#00dee6" class="color-picker">
+            </div>
+            
+            <div class="control-group">
+                <label>Seed Pattern</label>
+                <div id="seed-pattern-container"></div>
+            </div>
+            
+            <button id="reset-btn">Reset All</button>
+        </div>
+        
+        <div class="canvas-container" id="canvas-container"></div>
+    </div>
+
+    <script src="js/tfractal.js"></script>
+    <script src="js/controls.js"></script>
+    <script src="js/sketch.js"></script>
+</body>
+</html>
